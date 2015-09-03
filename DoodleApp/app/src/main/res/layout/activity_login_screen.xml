@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.chris.doodleapp.LoginScreenActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:orientation="vertical"
+        android:id="@+id/loginLayout"
+        android:layout_centerHorizontal="true"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/introLogo"
+        android:text="Doodle App"
+        android:textSize="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+         />
+    <EditText
+        android:id="@+id/nameEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/introLogo"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doodle!"
+        android:layout_below="@+id/nameEdit"
+        android:id="@+id/loginButton"
+        android:layout_centerHorizontal="true"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:id = "@+id/groupLayout"
+        android:layout_width = "fill_parent"
+        android:layout_height = "fill_parent"
+        android:orientation = "vertical"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/refreshButton"
+                android:text="Refresh Groups"
+                android:layout_weight = "1"
+                android:gravity = "center"
+                />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id = "@+id/changeNameButton"
+                android:text = "Change Name"
+                android:layout_weight = "1"
+                android:gravity = "center"
+                />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id = "@+id/createGroupButton"
+                android:text = "Create Group"
+                android:layout_weight = "1"
+                android:gravity = "center"
+                />
+        </LinearLayout>
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/grouplist"
+            android:layout_weight="1"
+            ></ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id = "@+id/createGroupLayout"
+        android:orientation="vertical"
+        android:layout_marginTop="104dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint = "Group Name"
+            android:id = "@+id/groupEdit"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "Create"
+                android:layout_weight="1"
+                android:id="@+id/groupSubmitButton"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "Cancel"
+                android:layout_weight="1"
+                android:id="@+id/cancelGroupButton"/>
+            </LinearLayout>
+        </LinearLayout>
+</RelativeLayout>
